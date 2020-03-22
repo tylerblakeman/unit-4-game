@@ -8,7 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Crystals Collector!</h1>
+    <div class="heading">
+        Crystals Collector!
+    </div>   
     <div class = "howTo">
         <p>You will be given a random number at the start of the game</p>
         <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
@@ -16,24 +18,54 @@
         <p>The value of each crystal is hidden from you until you click on it.</p>
         <p>Each time when the game starts the game will change the values of each crystal</p>    
     </div>
-    <div class="numberToMatch"></div>
+
     <div class="scoreboard">
         <div class="wins">
-
+            WINS
+            <hr>
+            <div class="winDisplay">
+                0
+            </div>
         </div>
-        <div class="losses">
-
-        </div>
-        <div class="images">
-            img
+        <div class="computerScore">
+            Score to Match
+            <hr>
+            <div class="scoreToMatch">
+                0
+            </div>
         </div>
         <div class="score">
-            <div class="totalscore">
-
+            Current score
+            <hr>
+                <div class="userScore">
+                0
+                </div>
+            </div>
+        <div class="losses">
+            LOSSES
+            <hr>
+            <div class="lossDisplay">
+                0
             </div>
         </div>
     </div>
+    <div class="images">
+        <img src="./images/ruby.png" alt="" class="ruby">
+        <img src="./images/Diamond.png" alt="" class="diamond">
+        <img src="./images/Topaz.png" alt="" class="topaz">
+        <img src="./images/Emerald.png" alt="" class="emerald">
+    </div>
+    
+    <div class="lower">
+        <div class="alerts">
+            Alerts
+            <div class="currentAlert">
+                
+            </div>
+        </div> 
+    </div>
     
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="./javascript/game.js"></script>
 </html>

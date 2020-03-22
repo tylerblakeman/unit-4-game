@@ -1,0 +1,77 @@
+div {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    font-weight: bold;
+}
+
+.howTo p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.scoreboard, .alerts {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-between;
+    border-width: 1px;
+    border-radius: 3px;
+    border-color: black;
+    border-style: solid;
+    background-color: yellow;
+}
+.wins, .losses, .computerScore, .score {
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    align-items: center;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+hr {
+    width: 100px;
+}
+
+.lossDisplay, .winDisplay, .totalscore {
+    margin-top: 5px;
+}
+.images {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+}
+img {
+    max-height: 100px;
+    width: auto;
+    margin: 10px;
+}
+
+.lower {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.lower, .alerts {
+    width: 100%;
+    justify-content: center;
+    min-height: 100px;
+    font-weight: bold;
+}
