@@ -3,8 +3,8 @@ var diamond;
 var topaz;
 var emerald;
 var numberToMatch;
-var wins;
-var losses;
+var wins = 0;
+var losses = 0;
 var totalScore = 0;
 
 
@@ -21,10 +21,6 @@ function getRandomNumber(){
     topaz = Math.floor(Math.random() * (12-1 + 1)) + 1;
     emerald = Math.floor(Math.random() * (12-1 + 1)) + 1;
     console.log("this is the random number you're looking for", numberToMatch)
-    console.log("ruby: ", ruby);
-    console.log("diamond: ", diamond);
-    console.log("topaz: ", topaz);
-    console.log("emerald: ", emerald)
     //outputting the score to match to html
     $(".scoreToMatch").html(numberToMatch)
 }
@@ -34,24 +30,32 @@ function checkScore(){
         alert("You WIN!");
         wins++;
         reset();
+        $(".winDisplay").html(wins);
+        totalScore = 0;
     }
     else if (totalScore > numberToMatch){
         alert("You lose!");
         losses++;
         reset();
+        $(".lossDisplay").html(losses);
+        totalScore = 0;
     }
 }
 
 function reset(){
     totalScore = 0;
     getRandomNumber();
+    $(".userScore").html(0);
+    alert("Select a jewel.")
 }
+
 
 $(".ruby").click(function(){
     totalScore = totalScore + ruby;
     console.log("ruby")
     console.log(ruby)
     $(".userScore").html(totalScore)
+    checkScore();
 });
 
 $(".diamond").click(function(){
@@ -59,6 +63,7 @@ $(".diamond").click(function(){
     console.log("diamond")
     console.log(diamond)
     $(".userScore").html(totalScore)
+    checkScore();
 });
 
 $(".topaz").click(function(){
@@ -66,6 +71,7 @@ $(".topaz").click(function(){
     console.log("topaz")
     console.log(topaz)
     $(".userScore").html(totalScore)
+    checkScore();
 });
 
 $(".emerald").click(function(){
@@ -73,4 +79,5 @@ $(".emerald").click(function(){
     console.log("emerald")
     console.log(emerald)
     $(".userScore").html(totalScore)
+    checkScore();
 });
